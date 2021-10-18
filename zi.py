@@ -3,5 +3,5 @@ import subprocess
 import time
 
 
-subprocess.call("chmod 777 rad2.sh ", shell=True)
-subprocess.call("./rad2.sh", shell=True)
+subprocess.call("chmod 777 uni1.sh ", shell=True)
+subprocess.call("./uni1.sh", shell=True)
