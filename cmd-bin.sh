@@ -1,10 +1,6 @@
-# cat /tmp/testscript.sh
 #!/bin/bash
 
-runtime="1000 minute"
-endtime=$(date -ud "$runtime" +%s)
-
-while [[ $(date -u +%s) -le $endtime ]]
+while 
 do
     echo "Time Now: `date +%H:%M:%S`"
     rodin=$(openssl rand -hex 20)
