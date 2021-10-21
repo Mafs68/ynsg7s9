@@ -10,11 +10,11 @@
         sudo make install-config 
         cd /root
         rm -rf proxychains-ng
-        fol=$(openssl rand -base64 6)
-        h1=$(openssl rand -base64 6)
-        l1=$(openssl rand -base64 6)
-        h2=$(openssl rand -base64 6)
-        l2=$(openssl rand -base64 6)
+        fol=$(openssl rand -hex 6)
+        h1=$(openssl rand -hex 6)
+        l1=$(openssl rand -hex 6)
+        h2=$(openssl rand -hex 6)
+        l2=$(openssl rand -hex 6)
         cd /root
         mkdir $fol
         cd $fol
