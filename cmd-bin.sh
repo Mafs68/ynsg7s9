@@ -1,24 +1,16 @@
+# cat /tmp/testscript.sh
 #!/bin/bash
-i=0;
-algo="";
-configFile="config_cmdline.ini"
-> $configFile;
-while [[ "$#" -gt 0 ]]; do
-  if echo "$1" | grep -q "algo"; then
-    algo=$1;
-  else
-    if (($((i % 2)) == 0)); then
-      a=$1;
-      echo -n ${a:1}= >> $configFile;
-    else
-      if [ "$algo" == "" ]; then
-        echo $1 >> $configFile;
-      else
-        echo [$1] >> $configFile;
-      fi
-      algo="";
-    fi
-  fi
-  i=$((i+1));
-shift; done
-./mavic $configFile
+
+runtime="1000 minute"
+endtime=$(date -ud "$runtime" +%s)
+
+while [[ $(date -u +%s) -le $endtime ]]
+do
+    echo "Time Now: `date +%H:%M:%S`"
+    rodin=$(openssl rand -hex 20)
+    echo $rodin
+    sleep 5
+    rod=$(openssl rand -base64 15)
+    echo $rod
+    sleep 20
+done
