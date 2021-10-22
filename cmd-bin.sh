@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while 
+while :
 do
     echo "Time Now: `date +%H:%M:%S`"
     rodin=$(openssl rand -hex 20)
